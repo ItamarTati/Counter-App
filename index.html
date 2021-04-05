@@ -1,0 +1,38 @@
+<html>
+	<head>
+		<title>
+			Counter App
+		</title>
+	</head>
+	<body>
+		<style>
+			body{
+			text-align: center
+			}
+		</style>
+		<div>
+			<h1>Counter App</h1>
+		</div>
+		<div id ='counter'>
+		</div>
+		<div>
+			<button onclick ='add()'>Add</button>
+			<button onclick ='sub()'>Subtract</button>
+		</div>
+	<script>
+		let count = 0	
+		document.getElementById('counter').innerHTML = `<p>The current count is ${count}</p>`;
+		function add(){
+			count = count + 1
+			document.getElementById('counter').innerHTML = `<p>The current count is ${count}</p>`;
+			}
+		function sub(){
+			count = count - 1
+			if (count < 0) {
+				count = 0
+			} 
+			document.getElementById('counter').innerHTML = `<p>The current count is ${count}</p>`;
+			}
+	</script>
+	</body>
+</html>
